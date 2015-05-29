@@ -1,0 +1,13 @@
+
+
+R:
+http://cran.rstudio.com/
+
+RStudio:
+http://www.rstudio.com/products/rstudio/download/
+
+Intro to Statistical Learning:
+
+Main Website: http://www.statlearning.com/
+PDF of Textbook: http://www-bcf.usc.edu/~gareth/ISL/ISLR%20First%20Printing.pdf
+Data for Labs: http://www-bcf.usc.edu/~gareth/ISL/data.html

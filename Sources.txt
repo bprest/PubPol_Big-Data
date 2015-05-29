@@ -1,5 +1,0 @@
-R:
-http://cran.rstudio.com/
-
-RStudio:
-http://www.rstudio.com/products/rstudio/download/
