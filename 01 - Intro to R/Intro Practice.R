@@ -31,6 +31,11 @@ y = c(7,8,9,10)
 z = x+y
 # Now it works
 
+# Note: Recycling!
+x = c(1,2)
+y = c(5,6,8,9)
+x+y # Should fail, but it works. What's happening? It repeats/recycles x to match the size of y
+
 # List function: Lists all objects currently held in R
 ls()
 
@@ -57,6 +62,11 @@ dim(X) # Find the size/dimension of the matrix
 X = matrix(c(1,2,3,4,5,6), 3, 2) # here, it automatically interprets the c() as the "data" argument because it's first, 3 as the nrows because it's second, etc.)
 Y = matrix(2, 3, c(1,2,3,4,5,6)) # here, it thinks that the data is just "2", and repeats it for 3 rows. It interprets 1 column by just taking the first value in the c() vector, which is 1
 dim(X) # returns the dimensions of the matrix (2 rows, 3 cols)
+
+data = c(1:30)
+X = array(data, dim=c(3,5,2))
+i = array(c(1,2,2,5,1,2), dim=c(2,3))
+X[i]
 
 # Algebra on vectors is pointwise by default
 x = c(1,2,3,4)
@@ -138,6 +148,7 @@ x[1:3]
 x[c(1,2,3)] # same thing
 x[c(3,2,1)] # reversed
 
+
 # Matrices
 A = matrix(16:1,4,4)
 A
@@ -153,8 +164,13 @@ A[2:4,]
 A[-2,] # all rows except 2
 A[-(2:3),] # all rows except 2 and 3
 
+# Logical Indexing
+A[A[,1]<=14,]
+A[(A[,1]<=14) | (A[,2]==11),]
 
-## THIS NEEDS WORK
+#########################################################################################
+############################### THIS NEEDS WORK #########################################
+#########################################################################################
 ### Working with Strings
 paste("apple","banana","candy")
 paste("apple","banana","candy",sep="--")
@@ -164,6 +180,7 @@ wdir = 'C:\\Users\\Brianprest\\OneDrive\\Grad School\\TAing\\Big Data\\Git'
 wdir
 list = dir(wdir)
 list[2]
+strsplit("a-b-c","-")
 
 
 
@@ -227,5 +244,13 @@ summary(mpg)
 
 
 # Calling whole functions with source('filepath')
+
+
+##### Writing functions
+sefunc = function(x) sqrt(var(x)/length(x))
+tapply(PhD,rep(1,dim(college)[1]),FUN=sefunc)
+
+z = c(1:12)
+dim(z) = c(2,3,2)
 
 
