@@ -65,7 +65,7 @@ plot(lstat,medv)
 abline(lm.fit) 
 # NOT:
 abline(a=10, b=1) # line with formula: y = a + bx. Hence "a,b line"
-abline(a=50, b=-1, lwd=5, col="orange") # line width = 5
+abline(a=50, b=-1, lwd=5, col="orange") # line width = 5. For a list of colors, type "colors()"
 plot(lstat,medv, pch="+") # Use the Plot CHaracter option to use + signs instead of circles. You can do whatever character you want here (try some)
 # Note: plot makes a NEW plot. To add things to an existing plot, you have to use options like line() or points()
 plot(1:25,1:25, pch=1:25) # See the basic options
