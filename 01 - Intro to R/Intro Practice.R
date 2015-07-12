@@ -140,6 +140,19 @@ persp(x,y,fa)
 persp(x,y,fa,theta=30) # theta controls the horizontal rotation (30 degrees clockwise from default)
 persp(x,y,fa,theta=30, phi=25) # phi controls the vertical rotation (25 degrees above default)
 
+# More 3D plots:
+x = matrix(rnorm(30*3), ncol=3)
+#install.packages("scatterplot3d")
+#install.packages("rgl")
+#install.packages("Rcmdr")
+library(scatterplot3d)
+library(rgl)
+library(Rcmdr)
+scatterplot3d(x, type="h")
+plot3d(x, col="red", size=1, type="s")
+scatter3d(x[,1],x[,2],x[,3])
+
+
 ### Indexing
 # Vectors
 x = c(4,9,7,2)
